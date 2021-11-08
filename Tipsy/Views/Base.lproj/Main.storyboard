@@ -37,6 +37,9 @@
                                         <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="ammountChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="AK6-mi-UnY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -46,26 +49,8 @@
                                     <constraint firstItem="wcN-ka-Q4F" firstAttribute="leading" secondItem="C9X-5R-fQ6" secondAttribute="leading" id="iu3-6Q-Ha3"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSl-VY-LBj">
-                                <rect key="frame" x="107" y="808" width="200" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="0Kv-JJ-dIu"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YdO-Bg-CpZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleColor" red="0.97254901959999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YX9-as-uPl"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOv-ot-7Fq">
-                                <rect key="frame" x="0.0" y="183" width="414" height="698"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOv-ot-7Fq">
+                                <rect key="frame" x="0.0" y="198" width="414" height="698"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-F4-RSD">
                                         <rect key="frame" x="20" y="20" width="374" height="221"/>
@@ -175,12 +160,28 @@
                                             <constraint firstAttribute="trailing" secondItem="QDm-4I-R22" secondAttribute="trailing" constant="30" id="tPk-Tm-mVc"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSl-VY-LBj">
+                                        <rect key="frame" x="121.5" y="624" width="171" height="54"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="  Calculate  ">
+                                            <color key="titleColor" red="0.97254901959999995" green="1" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YX9-as-uPl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84362953900000004" green="0.97556561230000005" blue="0.92320168020000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="NtY-F4-RSD" firstAttribute="leading" secondItem="EOv-ot-7Fq" secondAttribute="leading" constant="20" id="3Na-jg-YoM"/>
                                     <constraint firstItem="NtY-F4-RSD" firstAttribute="top" secondItem="EOv-ot-7Fq" secondAttribute="top" constant="20" id="BDT-pf-BlM"/>
                                     <constraint firstAttribute="trailing" secondItem="NtY-F4-RSD" secondAttribute="trailing" constant="20" id="KbR-NJ-DEv"/>
+                                    <constraint firstItem="FSl-VY-LBj" firstAttribute="centerX" secondItem="EOv-ot-7Fq" secondAttribute="centerX" id="Nht-BS-Shz"/>
+                                    <constraint firstAttribute="bottom" secondItem="FSl-VY-LBj" secondAttribute="bottom" constant="20" id="yyF-yk-sDf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -192,30 +193,30 @@
                             <constraint firstAttribute="trailing" secondItem="EOv-ot-7Fq" secondAttribute="trailing" id="WvU-9q-hyp"/>
                             <constraint firstItem="EOv-ot-7Fq" firstAttribute="leading" secondItem="T0M-56-42h" secondAttribute="leading" id="YQ0-GT-vCe"/>
                             <constraint firstItem="C9X-5R-fQ6" firstAttribute="top" secondItem="Ptx-Zl-eGc" secondAttribute="top" constant="10" id="lLb-4U-26R"/>
-                            <constraint firstItem="FSl-VY-LBj" firstAttribute="centerX" secondItem="T0M-56-42h" secondAttribute="centerX" id="m9o-NN-vLW"/>
-                            <constraint firstItem="FSl-VY-LBj" firstAttribute="bottom" secondItem="Ptx-Zl-eGc" secondAttribute="bottom" id="s6x-e3-KgU"/>
                             <constraint firstItem="Ptx-Zl-eGc" firstAttribute="trailing" secondItem="C9X-5R-fQ6" secondAttribute="trailing" id="uaf-hV-nhR"/>
                             <constraint firstItem="EOv-ot-7Fq" firstAttribute="top" secondItem="C9X-5R-fQ6" secondAttribute="bottom" constant="40" id="vpj-kh-cbm"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="billTextField" destination="wcN-ka-Q4F" id="KSQ-Vo-4Aw"/>
+                        <outlet property="billTextField" destination="wcN-ka-Q4F" id="gAE-Hh-5f4"/>
+                        <outlet property="paxStepper" destination="haq-5m-pqs" id="ux3-GZ-Riu"/>
                         <outlet property="splitNumberLabel" destination="bSy-Yc-886" id="0Iu-cA-ffI"/>
                         <outlet property="tenPctButton" destination="7y6-Kf-yF0" id="Vzx-Tv-fDY"/>
                         <outlet property="twentyPctButton" destination="UtR-dU-EKt" id="Kh6-0w-l5e"/>
                         <outlet property="zeroPcButton" destination="XzR-0E-Xf7" id="Nme-Bk-4ng"/>
+                        <segue destination="Dnf-m2-FPm" kind="presentation" identifier="showResults" id="Gmc-ft-iXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="78"/>
+            <point key="canvasLocation" x="-410.14492753623193" y="77.678571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="bJV-Cc-sXH">
             <objects>
-                <viewController id="Dnf-m2-FPm" sceneMemberID="viewController">
+                <viewController id="Dnf-m2-FPm" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNW-gk-FsX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-Te-efL">
@@ -252,7 +253,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzn-9K-6hu">
-                                <rect key="frame" x="107" y="808" width="200" height="54"/>
+                                <rect key="frame" x="107" y="754" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="0Lh-eY-3GO"/>
@@ -265,6 +266,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="Dnf-m2-FPm" eventType="touchUpInside" id="Sg7-Qb-dqW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGt-bn-sCv">
                                 <rect key="frame" x="50" y="305" width="314" height="117"/>
@@ -289,10 +293,14 @@
                             <constraint firstItem="ZCe-Te-efL" firstAttribute="top" secondItem="DNW-gk-FsX" secondAttribute="top" id="zdY-59-9ry"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="HGt-bn-sCv" id="gXE-Qy-ADd"/>
+                        <outlet property="totalLabel" destination="uLJ-ii-hft" id="Hdh-DE-aQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLi-Eb-NGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893" y="118"/>
+            <point key="canvasLocation" x="919" y="78"/>
         </scene>
     </scenes>
 </document>
